@@ -7,9 +7,9 @@ window.data = {
     return arrayFilter;
 
   },
-  compute: (dataPokemon) => {
+  compute: (data) => {
     const arrayCandy = [];
-      dataPokemon.forEach((element) => {
+      data.forEach((element) => {
         if (element.candy_count > 0 ) {
           arrayCandy.push(element.candy_count)
         }
