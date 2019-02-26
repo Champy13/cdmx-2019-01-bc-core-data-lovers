@@ -1,7 +1,7 @@
 //Declaración de variables y constantes que se utilizaran
-// var POKEMON;
-// const dataPokemon = POKEMON.pokemon;
-let dataPokemon;
+var POKEMON;
+const dataPokemon = POKEMON.pokemon;
+// let dataPokemon;
 const buttonTypes = Array.from(document.getElementsByClassName("typesPokemon"));
 const buttonOrder = Array.from(document.getElementsByClassName("orderButtonType"));
 const searchLett = document.getElementById("searchNav");
@@ -137,14 +137,15 @@ const paintData = (dataPaint) => {
   })
 }
 
-const pruebaFetch = () => {
-  fetch("./data/pokemon/pokemon.json")
-    .then(res => res.json())
-    .then(dataPoke => {
-      dataPokemon = dataPoke.pokemon;
-    })
-}
+// const pruebaFetch = () => {
+//   fetch("./data/pokemon/pokemon.json")
+//     .then(res => res.json())
+//     .then(dataPoke => {
+//       dataPokemon = dataPoke.pokemon;
+//       return dataPokemon;
+//     })
+// }
 
-pruebaFetch();
+// pruebaFetch();
 
 
