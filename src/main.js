@@ -10,6 +10,7 @@ const pokemones = document.getElementById("pokemones");
 const pokemonees = document.getElementById("pokemonees");
 const promedioCandy = document.getElementById("candy-prom");
 
+// comentario
 
 
 //Funcion de boton de Inicio
