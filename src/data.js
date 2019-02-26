@@ -7,6 +7,17 @@ window.data = {
     return arrayFilter;
 
   },
+  compute: (dataPokemon) => {
+    const arrayCandy = [];
+      dataPokemon.forEach((element) => {
+        if (element.candy_count > 0 ) {
+          arrayCandy.push(element.candy_count)
+        }
+      });
+      const sum = arrayCandy.reduce((prev, sig) => prev + sig);
+      const promCan = sum / arrayCandy.length;
+      return promCan;
+  },
 
   //Función de Ordenado, recibe la Data el parametro por el que se va a Ordenar: altura o peso, y si será ascendente o Descendente
   sortDataPokemon: (data, sortBy, sortOrder) => {
@@ -31,4 +42,6 @@ window.data = {
     const searConside = dataPokemon.filter(dataPokemon => (dataPokemon.name.toLowerCase().match(letterValue.toLowerCase())));
     return searConside;
   }
+  
 }
+

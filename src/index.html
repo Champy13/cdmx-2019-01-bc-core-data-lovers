@@ -7,7 +7,6 @@
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
@@ -35,6 +34,7 @@
             alt="fuente-pokemon"></a>
         <a href="#filter" id="filterNav"><i class="fas fa-filter"></i>Filtrado</a>
         <a href="#order" id="orderNav"><i class="fas fa-list-ol"></i>Ordenado</a>
+        <a href="#promedio" id="promedio"><i class="fas fa-calculator"></i>Promedio</a>
         <i class="fas fa-search"></i><input type="search" class="search-style" id="searchNav" placeholder="Ejemplo: Pikachu">
         <a href="javascript:void(0);" class="icon" onclick="functionNav()">
           <i class="fa fa-bars"></i>
@@ -105,7 +105,22 @@
       </form>
       <div class="paintPokemons" id="pokemonees"></div>
     </section>
+
+    <section id="prome">
+      <form>
+        <fieldset>
+          <legend>Promedio</legend>
+          <button type="button" class="buttons-style sizeButtonOrder" id="candy-prom">Promedio Candy-Count
+          </button>
+          <p id="prom-candy-resul"></p>
+         </fieldset>
+      </form>
+     </section>
+
+
   </section>
+
+  
 
   <div id="root"></div>
   <!-- <script src="./data/injuries/injuries.js"></script> -->

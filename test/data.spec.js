@@ -244,6 +244,11 @@ describe('data', () => {
   it('Deberia devolver la coincidencia de Kakuna', () => {
     expect(window.data.filterLetterPokemon(dataBase, "Kakuna")[0]).toEqual(dataBase[3]);
   });
-
+  it('compute is a function', () => {
+    expect(typeof window.data.compute).toBe('function');
+  });
+  it('Deberia devolver el promedio de Candy', () => {
+    expect(window.data.compute(dataBase)).toEqual(24.75);
+  });
 
 });
