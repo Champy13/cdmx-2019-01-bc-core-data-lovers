@@ -1,13 +1,13 @@
 //Declaración de variables y constantes que se utilizaran
-
-var POKEMON;
-const dataPokemon = POKEMON.pokemon;
+let dataPokemon;
 const buttonTypes = Array.from(document.getElementsByClassName("typesPokemon"));
 const buttonOrder = Array.from(document.getElementsByClassName("orderButtonType"));
 const searchLett = document.getElementById("searchNav");
 const pokemons = document.getElementById("pokemons");
 const pokemones = document.getElementById("pokemones");
 const pokemonees = document.getElementById("pokemonees");
+const promedioCandy = document.getElementById("candy-prom");
+
 
 
 //Funcion de boton de Inicio
@@ -18,13 +18,13 @@ document.getElementById("NextButton").addEventListener("click", () => {
   document.getElementById("serch").style.display = "block";
   document.getElementById("mainSection").style.display = "none";
   document.getElementById("order").style.display = "none";
-
+  document.getElementById("prome").style.display = "none";
+  
 
 })
 //Funcion de Boton home
 document.getElementById("home").addEventListener("click", () => {
   document.getElementById("navs").style.display = "none";
-  // document.getElementById("navs").style.display="none";
   document.getElementById("serch").style.display = "block";
   document.getElementById("mainSection").style.display = "none";
   document.getElementById("order").style.display = "none"
@@ -36,7 +36,6 @@ document.getElementById("home").addEventListener("click", () => {
 document.getElementById("filterNav").addEventListener("click", () => {
 
   document.getElementById("navs").style.display = "block";
-  // document.getElementById("order").style.display="none";
   document.getElementById("pokemons").style.display = "none";
 
 
@@ -47,6 +46,15 @@ document.getElementById("orderNav").addEventListener("click", () => {
   document.getElementById("order").style.display = "block";
   document.getElementById("navs").style.display = "none"
   document.getElementById("pokemons").style.display = "none";
+
+})
+
+document.getElementById("promedio").addEventListener("click", () => {
+  document.getElementById("navs").style.display = "none";
+  document.getElementById("prome").style.display = "block";
+  document.getElementById("pokemons").style.display = "none";
+  document.getElementById("order").style.display = "none";
+
 
 })
 //Funcion hace al navegado responsive
@@ -62,25 +70,21 @@ function functionNav() {
 functionNav();
 //Funcion para llamar al filter
 const dataPaint = (arregloBotones) => {
-
   arregloBotones.map((tipo) => {
-
     tipo.addEventListener("click", (event) => {
-
-
+      
       const getTypePokemon = event.target.id;
-
-
       const arregloFiltrado = window.data.filterPokemon(dataPokemon, getTypePokemon);
-
+      
       paintData(arregloFiltrado);
     })
   });
 
 }
-
 dataPaint(buttonTypes);
 //Funcion para llamar a odernar
+
+
 const sortButton = (botonesOrder) => {
   botonesOrder.map(eventoSor => {
     eventoSor.addEventListener("click", (event) => {
@@ -107,7 +111,11 @@ const filterCoincidence = () => {
 
 filterCoincidence();
 
-//  Funcion de Imprimir 
+
+promedioCandy.addEventListener("click", () => { 
+  document.getElementById("prom-candy-resul").innerHTML = window.data.compute(dataPokemon);
+})
+
 
 const paintData = (dataPaint) => {
 
@@ -126,3 +134,15 @@ const paintData = (dataPaint) => {
                                         <p class="namePokemon" id="nameCenter"> Nombre:  ${ dataPokemon.name }</p><br><p class="namePokemon" id="nameCenter"> Altura:  ${ dataPokemon.height }</p><br><p class="namePokemon">Peso: ${dataPokemon.weight}</p></div>`;
   })
 }
+
+const pruebaFetch = () => {
+  fetch("data/pokemon/pokemon.json")
+    .then(res => res.json())
+    .then(dataPoke => {
+      dataPokemon = dataPoke.pokemon;
+    })
+}
+
+pruebaFetch();
+
+
