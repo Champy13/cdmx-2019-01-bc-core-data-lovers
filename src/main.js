@@ -1,4 +1,6 @@
 //Declaración de variables y constantes que se utilizaran
+// var POKEMON;
+// const dataPokemon = POKEMON.pokemon;
 let dataPokemon;
 const buttonTypes = Array.from(document.getElementsByClassName("typesPokemon"));
 const buttonOrder = Array.from(document.getElementsByClassName("orderButtonType"));
@@ -136,7 +138,7 @@ const paintData = (dataPaint) => {
 }
 
 const pruebaFetch = () => {
-  fetch("data/pokemon/pokemon.json")
+  fetch("./data/pokemon/pokemon.json")
     .then(res => res.json())
     .then(dataPoke => {
       dataPokemon = dataPoke.pokemon;
