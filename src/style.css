@@ -16,8 +16,7 @@ html,
 body {
   margin: 0;
   height: 100%;
-  font-family: 'Quattrocento Sans', sans-serif;
-
+  font-family: "Quattrocento Sans", sans-serif;
 }
 
 form {
@@ -50,7 +49,7 @@ h1 {
 }
 
 #mainSection {
-  background-image: url(../src/assets/img/fondoPokemon.png);
+  background-image: url(../src/assets/img/Entrar.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -59,7 +58,6 @@ h1 {
   width: 100%;
   height: 100%;
   display: inline-block;
-
 }
 
 #serch {
@@ -98,7 +96,6 @@ p i {
   padding: 1%;
   margin: 3%;
   border-radius: 10%;
-
 }
 
 .divPokemon img {
@@ -108,11 +105,9 @@ p i {
   left: 39px;
 }
 
-
 .divPokemon p {
   display: inline-block;
   position: absolute;
-
 }
 
 .divPokemon figure {
@@ -121,8 +116,7 @@ p i {
 }
 
 .namePokemon {
-
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: "Quattrocento Sans", sans-serif;
   color: #fff;
   font-size: 70%;
   letter-spacing: 2.5px;
@@ -132,17 +126,14 @@ p i {
 }
 
 .buttons-style {
-
   border-radius: 20px;
   border: 3% groove #000000;
   cursor: pointer;
-  -webkit-transition-duration: 0.10s;
+  -webkit-transition-duration: 0.1s;
   transition-duration: 0.4s;
   font-family: Pokemon-Solid;
   color: rgb(12, 10, 1);
   font-size: 20px;
-
-
 }
 
 .sizeButtonTypes {
@@ -151,7 +142,6 @@ p i {
 }
 
 .sizeButtonOrder {
-
   height: 75px;
   width: 300px;
 }
@@ -224,20 +214,19 @@ p i {
   margin-top: 3px;
 }
 
-
 .buttonNext {
-  border-radius: 50% 50% 50% 50%;
+  /* border-radius: 50% 50% 50% 50%;
   -moz-border-radius: 50% 50% 50% 50%;
-  -webkit-border-radius: 50% 50% 50% 50%;
-  padding: 20px 30px 20px 30px;
-  height: 150px;
+  -webkit-border-radius: 50% 50% 50% 50%; */
+  /* padding: 20px 30px 20px 30px; */
+  height: 50px;
   width: 150px;
-  margin-top: 200px;
-
+  /* margin-top: 200px; */
 }
 
 .buttons-style:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
   background-color: rgb(94, 204, 207);
   /* Green */
   color: black;
@@ -256,7 +245,6 @@ p i {
   display: none;
 }
 
-
 /* Add a black background color to the top navigation */
 .navBar {
   background-color: #333;
@@ -264,9 +252,7 @@ p i {
   position: fixed;
   z-index: 999;
   width: 100%;
-
 }
-
 
 /* Style the links inside the navigation bar */
 .navBar a {
@@ -287,7 +273,7 @@ p i {
 
 /* Add an active class to highlight the current page */
 .active {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
@@ -328,7 +314,6 @@ p i {
     display: block;
     text-align: left;
   }
-
 }
 
 @media (max-width: 999px) and (min-width: 320px) {
@@ -359,7 +344,6 @@ p i {
   .buttons-style {
     margin-top: 30px;
   }
-
 }
 
 .messageWelcome {
@@ -380,7 +364,7 @@ p i {
   border: 1px solid #b7b7b7;
   -webkit-border-radius: 15px;
   border-radius: 15px;
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: "Quattrocento Sans", sans-serif;
   color: rgba(0, 142, 198, 1);
   -o-text-overflow: clip;
   text-overflow: clip;
