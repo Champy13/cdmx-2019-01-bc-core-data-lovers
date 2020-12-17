@@ -70,7 +70,7 @@ fieldset {
 }
 
 #serch {
-  background-image: url(../src/assets/img/2.jpg);
+  /* background-image: url(../src/assets/img/2.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,9 +79,8 @@ fieldset {
   width: 100%;
   height: 100%;
   position: absolute;
-  display: inline-block;
+  display: inline-block; */
   display: none;
-  overflow: auto;
 }
 
 i {
@@ -126,12 +125,7 @@ p i {
 
 .namePokemon {
   font-family: "Quattrocento Sans", sans-serif;
-  color: #fff;
   font-size: 70%;
-  letter-spacing: 2.5px;
-  margin-top: 74%;
-  margin-left: -47%;
-  text-align: left;
 }
 
 .buttons-style {
@@ -155,72 +149,70 @@ p i {
   width: 300px;
 }
 
-#Fire.buttons-style:hover {
+.Fire {
   background-color: rgb(252, 83, 5);
 }
 
-#Normal.buttons-style:hover {
+.Normal {
   background-color: rgb(134, 126, 122);
 }
 
-#Water.buttons-style:hover {
+.Water {
   background-color: rgb(48, 137, 240);
 }
 
-#Grass.buttons-style:hover {
+.Grass {
   background-color: rgb(44, 219, 67);
 }
 
-#Electric.buttons-style:hover {
+.Electric {
   background-color: rgb(245, 222, 19);
 }
 
-#Ice.buttons-style:hover {
+.Ice {
   background-color: rgb(171, 169, 196);
 }
 
-#Fighting.buttons-style:hover {
+.Fighting {
   background-color: rgb(32, 27, 27);
   color: floralwhite;
 }
 
-#Poison.buttons-style:hover {
+.Poison {
   background-color: rgb(194, 79, 204);
 }
 
-#Ground.buttons-style:hover {
+.Ground {
   background-color: rgb(143, 92, 69);
 }
 
-#Flying.buttons-style:hover {
+.Flying {
   background-color: rgb(190, 184, 181);
 }
 
-#Psychic.buttons-style:hover {
+.Psychic {
   background-color: rgb(160, 161, 73);
 }
 
-#Bug.buttons-style:hover {
+.Bug {
   background-color: rgb(36, 187, 104);
 }
 
-#Rock.buttons-style:hover {
+.Rock {
   background-color: rgb(122, 105, 97);
 }
 
-#Ghost.buttons-style:hover {
+.Ghost {
   background-color: rgb(169, 36, 187);
 }
 
-#Dragon.buttons-style:hover {
+.Dragon {
   background-color: rgb(120, 236, 43);
 }
 
 .numberSite {
   font-family: Sketch;
   font-size: 20px;
-  text-align: center;
-  margin-top: 3px;
 }
 
 .buttonNext {
@@ -278,14 +270,18 @@ p i {
 }
 
 /* Add an active class to highlight the current page */
-.active {
+/* .active {
   background-color: #4caf50;
   color: white;
-}
+} */
 
 /* Hide the link that should open and close the navBar on small screens */
 .navBar .icon {
   display: none;
+}
+
+.img-modal {
+  width: 40%;
 }
 
 @media screen and (max-width: 600px) {

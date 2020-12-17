@@ -1,152 +1,119 @@
 //Declaración de variables y constantes que se utilizaran
-var POKEMON;
-const dataPokemon = POKEMON.pokemon;
-// let dataPokemon;
-const buttonTypes = Array.from(document.getElementsByClassName("typesPokemon"));
-const buttonOrder = Array.from(document.getElementsByClassName("orderButtonType"));
-const searchLett = document.getElementById("searchNav");
-const pokemons = document.getElementById("pokemons");
-const pokemones = document.getElementById("pokemones");
-const pokemonees = document.getElementById("pokemonees");
-const promedioCandy = document.getElementById("candy-prom");
-
-// comentario
-
-
 //Funcion de boton de Inicio
 document.getElementById("NextButton").addEventListener("click", () => {
-  paintData(dataPokemon);
-  document.getElementById("navs").style.display = "none";
-  document.getElementById("barra").style.display = "block";
   document.getElementById("serch").style.display = "block";
   document.getElementById("mainSection").style.display = "none";
-  document.getElementById("order").style.display = "none";
-  document.getElementById("prome").style.display = "none";
-  
+});
 
-})
-//Funcion de Boton home
-document.getElementById("home").addEventListener("click", () => {
-  document.getElementById("navs").style.display = "none";
-  document.getElementById("serch").style.display = "block";
-  document.getElementById("mainSection").style.display = "none";
-  document.getElementById("order").style.display = "none"
-  document.getElementById("pokemons").style.display = "block";
-  paintData(dataPokemon);
+//API url
+const api_url = "./data/pokemon/pokemon.json";
 
-})
-//Funcion de Filtrado en el navegador
-document.getElementById("filterNav").addEventListener("click", () => {
+//Defining async function
+async function getapi(url) {
+  //Storing response
+  const response = await fetch(url);
 
-  document.getElementById("navs").style.display = "block";
-  document.getElementById("pokemons").style.display = "none";
+  //Storing data in from JSON
+  let data = await response.json();
+  console.log(data);
 
-
-})
-//Funcion de Ordenado en el navegador
-document.getElementById("orderNav").addEventListener("click", () => {
-
-  document.getElementById("order").style.display = "block";
-  document.getElementById("navs").style.display = "none"
-  document.getElementById("pokemons").style.display = "none";
-
-})
-
-document.getElementById("promedio").addEventListener("click", () => {
-  document.getElementById("navs").style.display = "none";
-  document.getElementById("prome").style.display = "block";
-  document.getElementById("pokemons").style.display = "none";
-  document.getElementById("order").style.display = "none";
-
-
-})
-//Funcion hace al navegado responsive
-function functionNav() {
-  var x = document.getElementById("navBarTop");
-  if (x.className === "navBar") {
-    x.className += " responsive";
-  } else {
-    x.className = "navBar";
+  if (response) {
+    hideloader();
   }
+  showdata(data);
 }
 
-functionNav();
-//Funcion para llamar al filter
-const dataPaint = (arregloBotones) => {
-  arregloBotones.map((tipo) => {
-    tipo.addEventListener("click", (event) => {
+//Calling that async function
+getapi(api_url);
+
+//Function to hide the loader
+function hideloader() {
+  document.getElementById("loading").style.display = "none";
+}
+
+//Function to paint the data
+function showdata(data) {
+  let dataId = document.getElementById("data");
+
+  data.pokemon.map((pokemon) => {
+    dataId.insertAdjacentHTML(
+      "beforebegin",
+      ` <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 p-4">
+          <div class="card  h-100 text-center m-0 bg-light"  id = ${pokemon.id}>
+            <div class="card-header namePokemon numberSite">N° ${
+              pokemon.num
+            } / 151
+            </div>
       
-      const getTypePokemon = event.target.id;
-      const arregloFiltrado = window.data.filterPokemon(dataPokemon, getTypePokemon);
-      
-      paintData(arregloFiltrado);
-    })
+            <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#miModal${
+              pokemon.name
+            }">
+  
+              <figure class="imgPokemon pt-4"><img src="${
+                pokemon.img
+              }" class="" alt="..."></figure>
+              <div class="card-body pt-0">
+                <h5 class="card-title mb-0 ">${pokemon.name}</h5>
+              </div>
+            </button>
+          </div>  
+        </div>
+
+        <div class="modal fade" id="miModal${pokemon.name}" role="dialog">
+          <div class="modal-dialog ">
+            <div class="modal-content text-center">
+              <div class=" text-center">
+                <h4 class="modal-title pt-4" id="name">${pokemon.name}</h4>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-12">
+                    <figure class="imgPokemon pt-4"><img src="${
+                      pokemon.img
+                    }" class="img-modal" alt="..."></figure>
+                    </div>
+                  </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5> Height: ${pokemon.height} </h5>
+                      </div>
+                      <div class="col-6">
+                        <h5>Weight: ${pokemon.weight} </h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div class="col-12">
+                      <h5>Type:     
+                      <span class="badge rounded-pill ${
+                        pokemon.type[0]
+                      } py-2 px-4"> ${pokemon.type[0]}</span>
+                      
+                      <span class="badge rounded-pill ${
+                        pokemon.type[1]
+                      } py-2 px-4"> ${
+        pokemon.type[1] == undefined ? "" : pokemon.type[1]
+      }</span>
+                      </h5>
+                      </div>
+                    </div>
+                  </li>
+                  <ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  `
+    );
   });
-
 }
-dataPaint(buttonTypes);
-//Funcion para llamar a odernar
-
-
-const sortButton = (botonesOrder) => {
-  botonesOrder.map(eventoSor => {
-    eventoSor.addEventListener("click", (event) => {
-      const idDivi = event.target.id.split("-");
-      const sortBy = idDivi[0];
-      const sortOrder = idDivi[1];
-      const arrayOrde = window.data.sortDataPokemon(dataPokemon, sortBy, sortOrder);
-
-      paintData(arrayOrde);
-
-    })
-  })
-}
-
-sortButton(buttonOrder);
-
-
-const filterCoincidence = () => {
-  searchLett.addEventListener("keyup", () => {
-    let searchValue = document.getElementById("searchNav").value;
-    paintData(window.data.filterLetterPokemon(dataPokemon, searchValue));
-  });
-}
-
-filterCoincidence();
-
-
-promedioCandy.addEventListener("click", () => { 
-  document.getElementById("prom-candy-resul").innerHTML = window.data.compute(dataPokemon);
-})
-
-
-const paintData = (dataPaint) => {
-
-  pokemons.innerHTML = " ";
-  pokemones.innerHTML = " ";
-  pokemonees.innerHTML = " ";
-
-  dataPaint.map((dataPokemon) => {
-
-    pokemons.innerHTML += `<div class="divPokemon" "><p class="namePokemon numberSite" id="idPokemon"> # ${dataPokemon.num} / 151</p><br><figure class="imgPokemon"><img  src="${dataPokemon.img}"></figure> 
-                    <p class="namePokemon" id="nameCenter"> Nombre:${dataPokemon.name}</p><br><p class="namePokemon">Tipo: ${dataPokemon.type}</p></div>`;
-    pokemones.innerHTML += `<div class="divPokemon" "><figure class="imgPokemon"><img  src="${dataPokemon.img}"></figure> <p class="namePokemon" id="idPokemon"> N.°${dataPokemon.id}</p><br>
-                    <p class="namePokemon" id="nameCenter"> Nombre:  ${ dataPokemon.name }</p><br><p class="namePokemon">Tipo: ${dataPokemon.type}</p></div>`;
-
-    pokemonees.innerHTML += `<div class="divPokemon" "><figure class="imgPokemon"><img  src="${dataPokemon.img}"></figure>
-                                        <p class="namePokemon" id="nameCenter"> Nombre:  ${ dataPokemon.name }</p><br><p class="namePokemon" id="nameCenter"> Altura:  ${ dataPokemon.height }</p><br><p class="namePokemon">Peso: ${dataPokemon.weight}</p></div>`;
-  })
-}
-
-// const pruebaFetch = () => {
-//   fetch("./data/pokemon/pokemon.json")
-//     .then(res => res.json())
-//     .then(dataPoke => {
-//       dataPokemon = dataPoke.pokemon;
-//       return dataPokemon;
-//     })
-// }
-
-// pruebaFetch();
-
-
