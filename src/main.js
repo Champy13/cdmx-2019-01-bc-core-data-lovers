@@ -1,8 +1,6 @@
-//Declaración de variables y constantes que se utilizaran
-//Funcion de boton de Inicio
-document.getElementById("NextButton").addEventListener("click", () => {
-  document.getElementById("serch").style.display = "block";
-  document.getElementById("mainSection").style.display = "none";
+document.getElementById("button-next").addEventListener("click", () => {
+  document.getElementById("main-section").style.display = "block";
+  document.getElementById("welcome-section").style.display = "none";
 });
 
 //API url
@@ -40,7 +38,7 @@ function showdata(data) {
       "beforebegin",
       ` <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 p-4">
           <div class="card  h-100 text-center m-0 bg-light"  id = ${pokemon.id}>
-            <div class="card-header namePokemon numberSite">N° ${
+            <div class="card-header name-pokemon-style number-pokemon-style">N° ${
               pokemon.num
             } / 151
             </div>
@@ -49,7 +47,7 @@ function showdata(data) {
               pokemon.name
             }">
   
-              <figure class="imgPokemon pt-4"><img src="${
+              <figure class="pt-4"><img src="${
                 pokemon.img
               }" class="" alt="..."></figure>
               <div class="card-body pt-0">
@@ -65,22 +63,22 @@ function showdata(data) {
               <div class=" text-center">
                 <h4 class="modal-title pt-4" id="name">${pokemon.name}</h4>
               </div>
-              <div class="modal-body">
+              <div class="modal-body p-0">
                 <div class="container-fluid">
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                   <div class="row">
                     <div class="col-12">
-                    <figure class="imgPokemon pt-4"><img src="${
+                    <figure class="pt-4"><img src="${
                       pokemon.img
-                    }" class="img-modal" alt="..."></figure>
+                    }" class="image-pokemon-modal" alt="..."></figure>
                     </div>
                   </div>
                   </li>
                   <li class="list-group-item">
                     <div class="row">
                       <div class="col-6">
-                        <h5> Height: ${pokemon.height} </h5>
+                        <h5 class= "my-1"> Height: ${pokemon.height} </h5>
                       </div>
                       <div class="col-6">
                         <h5>Weight: ${pokemon.weight} </h5>
@@ -90,12 +88,12 @@ function showdata(data) {
                   <li class="list-group-item">
                     <div class="row">
                       <div class="col-12">
-                      <h5>Type:     
-                      <span class="badge rounded-pill ${
+                      <h5 class= "my-1">Type:     
+                      <span class="badge rounded-pill text-light ${
                         pokemon.type[0]
                       } py-2 px-4"> ${pokemon.type[0]}</span>
                       
-                      <span class="badge rounded-pill ${
+                      <span class="badge rounded-pill text-light ${
                         pokemon.type[1]
                       } py-2 px-4"> ${
         pokemon.type[1] == undefined ? "" : pokemon.type[1]
@@ -104,7 +102,7 @@ function showdata(data) {
                       </div>
                     </div>
                   </li>
-                  <ul>
+                  </ul>
                 </div>
               </div>
               <div class="modal-footer">

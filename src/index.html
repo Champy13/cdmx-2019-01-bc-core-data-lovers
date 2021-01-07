@@ -24,47 +24,26 @@
 </head>
 
 <body>
-  <section id="mainSection" class=".container-fluid">
+  <section id="welcome-section" class=".container-fluid">
     <div class="row align-items-center mx-0 h-100">
       <div class="col-2">
       </div>
       <div class="col-4 px-4 ">
 
-        <h1 class="title display-2 pb-4">DataDex</h1>
+        <h1 class="title-style display-2 pb-4">DataDex</h1>
 
-        <h3 class="pb-4">¡Encuentra TODO sobre tus Pokemons!</h3>
+        <h3 class="pb-4">Find ALL about your Pokémon!</h3>
 
-        <button type="submit" id="NextButton" class="buttons-style buttonNext rounded-pill my-4">ENTRAR</button>
+        <button type="submit" id="button-next" class="button-go-style rounded-pill my-4">Let's GO!</button>
       </div>
       <div class="col-6">
       </div>
     </div>
   </section>
 
-  <section id="serch">
-
+  <section id="main-section">
     <nav class="navbar navbar-expand-lg  fixed-top navbar-dark bg-dark">
-      <a class="navbar-brand" href="./index.html"><img class="icon-crow" src="./assets/img/Logo.png"
-          style="width: 150px; height: 50px;" alt=""> </a>
-      <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span><img src="https://github.com/ErandiCVC13/Portafolio/blob/master/src/assets/img/menu.png?raw=true"
-            alt=""></span>
-      </button>
-
-      <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="nav navbar-nav ">
-          <li class="nav-item ">
-            <a class="nav-link " href="#home">Filtro </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#aboutme">Orden</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#proyects">Promedio</a>
-          </li>
-        </ul>
-      </div> -->
+      <a class="navbar-brand" href="./index.html"><img class="logo-nav-style" src="./assets/img/Logo.png" alt=""> </a>
     </nav>
 
     <div class="d-flex justify-content-center mt-5 pt-5">
@@ -72,139 +51,15 @@
         <span class="sr-only">Loading...</span>
       </div>
     </div>
-    <section class=".container-fluid px-5 m-0">
-      <!-- <div id = "modal"></div> -->
+
+    <div class=".container-fluid px-5 m-0">
       <div class="row  g-4 my-3 ">
         <div id="data"></div>
       </div>
-    </section>
-
-
-    <!-- Modal -->
-
+    </div>
   </section>
 
-
-  <!-- <section id="serch">
-    <section id="barra">
-      <div class="navBar" id="navBarTop">
-        <a href="#home" id="home" class="active"><img
-            src="https://fontmeme.com/permalink/190219/14ab33fbcfd74d5dd1a6b58fa455cca7.png" alt="fuente-pokemon"></a>
-        <a href="#filter" id="filterNav"><i class="fas fa-filter"></i>Filtrado</a>
-        <a href="#order" id="orderNav"><i class="fas fa-list-ol"></i>Ordenado</a>
-        <a href="#promedio" id="promedio"><i class="fas fa-calculator"></i>Promedio</a>
-        <i class="fas fa-search"></i><input type="search" class="search-style" id="searchNav"
-          placeholder="Ejemplo: Pikachu">
-        <a href="javascript:void(0);" class="icon" onclick="functionNav()">
-          <i class="fa fa-bars"></i>
-        </a>
-
-      </div>
-
-    </section>
-
-    <div class="paintPokemons" id="pokemons"></div>
-
-    <section id="navs">
-
-      <form>
-<        <fieldset id="typesPokeBottons">
-          <legend><i class="fas fa-thumbtack"></i>Tipos </legend>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Fire"><i
-              class="fas fa-fire-alt"></i>
-            Fuego</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Normal"><i
-              class="fas fa-ticket-alt"></i>
-            Normal</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Water"><i
-              class="fas fa-tint"></i>
-            Agua</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Grass"><i
-              class="fas fa-leaf"></i>
-            Hierba</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Electric"><i
-              class="fas fa-bolt"></i>
-            Electrico</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Ice"><i
-              class="fas fa-snowflake"></i>
-            Hielo</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Fighting"><i
-              class="fas fa-fist-raised"></i>
-            Pelea</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Poison"><i
-              class="fas fa-book-dead"></i>
-            Veneno</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Ground"><i
-              class="fas fa-mountain"></i>
-            Tierra</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Flying"><i
-              class="fas fa-feather-alt"></i>
-            Volador</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Psychic"><i
-              class="fas fa-hat-wizard"></i>
-            Psiquico</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Bug"><i class="fas fa-bug"></i>
-            Bicho</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Rock"><i
-              class="fab fa-shopware"></i>
-            Roca</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Ghost"><i
-              class="fas fa-ghost"></i>
-            Fantasma</button>
-          <button type="button" class="typesPokemon buttons-style sizeButtonTypes" id="Dragon"><i
-              class="fas fa-dragon"></i>
-            Dragon</button>
-        </fieldset>
-      </form>
-      <div class="paintPokemons" id="pokemones"></div>
-
-    </section>
-
-    <section id="order">
-      <form>
-        <fieldset>
-          <legend>ORDENAR</legend>
-          <p><i class="fas fa-balance-scale"></i>Peso</p>
-          <button type="button" class="orderButtonType buttons-style sizeButtonOrder" id="weight-asc"><i
-              class="fas fa-caret-square-up"></i>
-            Ligeros-Pesados</button>
-          <button type="button" class="orderButtonType buttons-style sizeButtonOrder" id="weight-dsc"><i
-              class="fas fa-caret-square-down"></i>
-            Pesados-Ligeros</button>
-          <p><i class="fas fa-arrows-alt-v"></i>Tamaño</p>
-          <button type="button" class="orderButtonType buttons-style sizeButtonOrder" id="height-asc"><i
-              class="fas fa-caret-square-up"></i>
-            Pequeños-Grandes</button>
-          <button type="button" class="orderButtonType buttons-style sizeButtonOrder" id="height-dsc"><i
-              class="fas fa-caret-square-down"></i>
-            Grandes-Pequeños</button>
-        </fieldset>
-      </form>
-      <div class="paintPokemons" id="pokemonees"></div>
-    </section>
-    
-    <section id="prome">
-      <form>
-        <fieldset>
-          <legend>Promedio</legend>
-          <button type="button" class="buttons-style sizeButtonOrder" id="candy-prom">Promedio Candy-Count
-          </button>
-          <p id="prom-candy-resul"></p>
-        </fieldset>
-      </form>
-    </section>
-
-
-  </section> -->
-
-
-
-  <div id="root"></div>
-  <!-- <script src="./data/injuries/injuries.js"></script> -->
   <script src="./data/pokemon/pokemon.js"></script>
-  <!-- <script src="./data/steam/steam.js"></script> -->
-  <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-  <!-- <script src="./data/lol/lol.js"></script> -->
   <script src="data.js"></script>
   <script src="main.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
