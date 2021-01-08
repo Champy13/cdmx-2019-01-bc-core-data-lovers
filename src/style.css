@@ -86,7 +86,7 @@ button:focus {
   width: 40%;
 }
 
-/* Background-color of Badges */
+/* Badges background-color */
 .Fire {
   background-color: rgb(252, 83, 5);
 }
@@ -113,7 +113,6 @@ button:focus {
 
 .Fighting {
   background-color: rgb(32, 27, 27);
-  color: floralwhite;
 }
 
 .Poison {

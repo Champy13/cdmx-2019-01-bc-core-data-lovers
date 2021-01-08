@@ -41,7 +41,7 @@ function showdata(data) {
             <div class="card-header name-pokemon-style number-pokemon-style">N° ${pokemon.num} / 151
             </div>
       
-            <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#miModal${pokemon.name}">
+            <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#miModal${pokemon.id}">
   
               <figure class="pt-4"><img src="${pokemon.img}" class="" alt="..."></figure>
               <div class="card-body pt-0">
@@ -51,11 +51,11 @@ function showdata(data) {
           </div>  
         </div>
 
-        <div class="modal fade" id="miModal${pokemon.name}" role="dialog">
+        <div class="modal fade" id="miModal${pokemon.id}" role="dialog">
           <div class="modal-dialog ">
             <div class="modal-content text-center">
               <div class=" text-center">
-                <p class="h4 modal-title pt-4" id="name">${pokemon.name}</p>
+                <p class="h4 modal-title pt-4" >${pokemon.name}</p>
               </div>
               <div class="modal-body p-0">
                 <div class="container-fluid">
