@@ -38,18 +38,12 @@ function showdata(data) {
       "beforebegin",
       ` <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 p-4">
           <div class="card  h-100 text-center m-0 bg-light"  id = ${pokemon.id}>
-            <div class="card-header name-pokemon-style number-pokemon-style">N° ${
-              pokemon.num
-            } / 151
+            <div class="card-header name-pokemon-style number-pokemon-style">N° ${pokemon.num} / 151
             </div>
       
-            <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#miModal${
-              pokemon.name
-            }">
+            <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#miModal${pokemon.name}">
   
-              <figure class="pt-4"><img src="${
-                pokemon.img
-              }" class="" alt="..."></figure>
+              <figure class="pt-4"><img src="${pokemon.img}" class="" alt="..."></figure>
               <div class="card-body pt-0">
                 <h5 class="card-title mb-0 ">${pokemon.name}</h5>
               </div>
@@ -69,9 +63,7 @@ function showdata(data) {
                 <li class="list-group-item">
                   <div class="row">
                     <div class="col-12">
-                    <figure class="pt-4"><img src="${
-                      pokemon.img
-                    }" class="image-pokemon-modal" alt="..."></figure>
+                    <figure class="pt-4"><img src="${pokemon.img}" class="image-pokemon-modal" alt="..."></figure>
                     </div>
                   </div>
                   </li>
@@ -91,15 +83,9 @@ function showdata(data) {
                       <p class= " h5 mb-3 mt-2">Type
                       </div>
                       <div class="col-12">    
-                      <span class="badge rounded-pill text-light ${
-                        pokemon.type[0]
-                      } py-2 px-4 "> ${pokemon.type[0]}</span>
+                      <span class="badge rounded-pill text-light ${pokemon.type[0]} py-2 px-4 "> ${pokemon.type[0]}</span>
                       
-                      <span class="badge rounded-pill text-light ${
-                        pokemon.type[1]
-                      } py-2 px-4 mt-1"> ${
-        pokemon.type[1] == undefined ? "" : pokemon.type[1]
-      }</span>
+                      <span class="badge rounded-pill text-light ${pokemon.type[1]} py-2 px-4 mt-1"> ${pokemon.type[1]}</span>
                       </p>
                       </div>
                     </div>

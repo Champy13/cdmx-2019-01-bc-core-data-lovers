@@ -148,6 +148,10 @@ button:focus {
   background-color: rgb(120, 236, 43);
 }
 
+.undefined {
+  display: none !important;
+}
+
 @media only screen and (max-width: 767px) {
   #welcome-section {
     background-image: url(../src/assets/img/mobile.png);
