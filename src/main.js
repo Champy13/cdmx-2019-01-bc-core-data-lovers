@@ -61,7 +61,7 @@ function showdata(data) {
           <div class="modal-dialog ">
             <div class="modal-content text-center">
               <div class=" text-center">
-                <h4 class="modal-title pt-4" id="name">${pokemon.name}</h4>
+                <p class="h4 modal-title pt-4" id="name">${pokemon.name}</p>
               </div>
               <div class="modal-body p-0">
                 <div class="container-fluid">
@@ -78,27 +78,29 @@ function showdata(data) {
                   <li class="list-group-item">
                     <div class="row">
                       <div class="col-6">
-                        <h5 class= "my-1"> Height: ${pokemon.height} </h5>
+                        <p class= "h5 my-1">Height: ${pokemon.height} </p>
                       </div>
                       <div class="col-6">
-                        <h5>Weight: ${pokemon.weight} </h5>
+                        <p class= "h5 my-1">Weight: ${pokemon.weight} </p>
                       </div>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="row">
                       <div class="col-12">
-                      <h5 class= "my-1">Type:     
+                      <p class= " h5 mb-3 mt-2">Type
+                      </div>
+                      <div class="col-12">    
                       <span class="badge rounded-pill text-light ${
                         pokemon.type[0]
-                      } py-2 px-4"> ${pokemon.type[0]}</span>
+                      } py-2 px-4 "> ${pokemon.type[0]}</span>
                       
                       <span class="badge rounded-pill text-light ${
                         pokemon.type[1]
-                      } py-2 px-4"> ${
+                      } py-2 px-4 mt-1"> ${
         pokemon.type[1] == undefined ? "" : pokemon.type[1]
       }</span>
-                      </h5>
+                      </p>
                       </div>
                     </div>
                   </li>

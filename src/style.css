@@ -147,3 +147,19 @@ button:focus {
 .Dragon {
   background-color: rgb(120, 236, 43);
 }
+
+@media only screen and (max-width: 767px) {
+  #welcome-section {
+    background-image: url(../src/assets/img/mobile.png);
+    width: 100%;
+  }
+
+  .image-pokemon-modal {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 382px) {
+  .image-pokemon-modal {
+    width: 60%;
+  }
+}

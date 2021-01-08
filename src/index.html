@@ -25,18 +25,21 @@
 
 <body>
   <section id="welcome-section" class=".container-fluid">
-    <div class="row align-items-center mx-0 h-100">
-      <div class="col-2">
+    <div class="row align-items-center mx-0 h-100 ">
+      <div class="col-2 d-none d-md-block">
       </div>
-      <div class="col-4 px-4 ">
+      <div class="col-md-4 col-sm-12 px-4 text-center">
 
-        <h1 class="title-style display-2 pb-4">DataDex</h1>
+        <h1 class="title-style display-2 d-none d-sm-none d-md-none d-lg-block py-4">DataDex</h1>
+        <h1 class="title-style display-3 d-none d-sm-none d-md-block d-lg-none pb-4">DataDex</h1>
+        <h1 class="title-style display-4 d-block d-sm-block d-md-none py-2 ">DataDex</h1>
 
-        <h3 class="pb-4">Find ALL about your Pokémon!</h3>
+        <p class="h3 pb-4 d-none d-sm-none d-md-block">Find ALL about your Pokémon!</p>
+        <p class="h6 pb-2 d-block d-sm-block d-md-none">Find ALL about your Pokémon!</p>
 
         <button type="submit" id="button-next" class="button-go-style rounded-pill my-4">Let's GO!</button>
       </div>
-      <div class="col-6">
+      <div class="col-6 ">
       </div>
     </div>
   </section>
